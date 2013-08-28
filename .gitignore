@@ -1,0 +1,11 @@
+*.pyc
+*.po
+*.wsgi
+*.swp
+.ropeproject
+.venv
+*.db
+*.log
+local_settings.py
+media
+
