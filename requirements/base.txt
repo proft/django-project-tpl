@@ -5,3 +5,4 @@ django-braces
 django-model-utils
 South
 unipath
+psycopg2
