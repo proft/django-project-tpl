@@ -1,7 +1,7 @@
 {% templatetag openblock %} load staticfiles {% templatetag closeblock %}
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
+<head>
     <meta charset="utf-8">
     <title>{% templatetag openblock %} block title {% templatetag closeblock %}{{ project_name }}{% templatetag openblock %} endblock title {% templatetag closeblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +11,7 @@
     <link href="{% templatetag openblock %} static 'css/bootstrap.min.css' {% templatetag closeblock %}" rel="stylesheet">
 
     <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
     <link href="{% templatetag openblock %} static 'css/base.css' {% templatetag closeblock %}" rel="stylesheet">
@@ -19,9 +19,11 @@
     {% templatetag openblock %} block extra_css {% templatetag closeblock %}{% templatetag openblock %} endblock extra_css {% templatetag closeblock %}
   </head>
 
-  <body>
+<body>
+    {% block content %}
     <p>Hello, {{ project_name }}!</p>
-
+    {% endblock %}
+    
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="{% templatetag openblock %} static 'js/bootstrap.min.js' {% templatetag closeblock %}"></script>
 
@@ -29,5 +31,5 @@
     <script src="{% templatetag openblock %} static 'js/base.js' {% templatetag closeblock %}"></script>
 
     {% templatetag openblock %} block extra_js {% templatetag closeblock %}{% templatetag openblock %} endblock extra_js {% templatetag closeblock %}
-  </body>
+</body>
 </html>
