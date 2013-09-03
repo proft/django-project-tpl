@@ -1,6 +1,6 @@
-My django project template + Bootstrap 3
+My django project template + Bootstrap 3.
 
-Working Environment with virtualenv
+Working Environment
 
     $ mkvirtualenv project_name
 
@@ -12,12 +12,10 @@ Creating project
 
     $ django-admin.py startproject --template=https://github.com/proft/django-project-tpl/archive/master.tar.gz --extension=py,html --name=.venv project_name
 
-Installation of Dependencies
-
-In development::
+Installation of dependencies for development:
 
     $ pip install -r requirements/local.txt
 
-For production::
+Installation of dependencies for production:
 
     $ pip install -r requirements.txt
