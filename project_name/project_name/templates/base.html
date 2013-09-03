@@ -20,9 +20,9 @@
   </head>
 
 <body>
-    {% block content %}
+    {% templatetag openblock %} block content {% templatetag closeblock %}
     <p>Hello, {{ project_name }}!</p>
-    {% endblock %}
+    {% templatetag openblock %} endblock content {% templatetag closeblock %}
     
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="{% templatetag openblock %} static 'js/bootstrap.min.js' {% templatetag closeblock %}"></script>
