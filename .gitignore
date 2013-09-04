@@ -5,6 +5,7 @@
 .ropeproject
 .venv
 *.db
+*.sqlite
 *.log
 local_settings.py
 media
