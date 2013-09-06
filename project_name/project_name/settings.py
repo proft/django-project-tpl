@@ -116,3 +116,7 @@ LOGGING = {
 
 WSGI_APPLICATION = '{{ project_name }}.wsgi.application'
 
+try:
+    from settings_local import *
+except ImportError, e:
+    raise e

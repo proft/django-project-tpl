@@ -7,6 +7,6 @@
 *.db
 *.sqlite
 *.log
-local_settings.py
+settings_local.py
 media
 
