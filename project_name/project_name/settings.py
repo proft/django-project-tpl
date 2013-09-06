@@ -3,7 +3,7 @@
 from unipath import Path
 
 PROJECT_DIR = Path(__file__).ancestor(4)
-MAINAPP_DIR = Path(__file__).ancestor(2)
+MAINAPP_DIR = Path(__file__).ancestor(1)
 
 ADMINS = (
     ('Your Name', 'your_email@example.com'),
