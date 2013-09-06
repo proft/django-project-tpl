@@ -3,5 +3,8 @@
 {% templatetag openblock %} block title {% templatetag closeblock %}Ошибка 404: страница не найдена{% templatetag openblock %} endblock {% templatetag closeblock %}
 
 {% templatetag openblock %} block content {% templatetag closeblock %}
-<p>Ошибка 404: страница не найдена.</p>
+<div class="panel panel-danger">
+    <div class="panel-heading">Ошибка 404</div>
+    <div class="panel-body text-danger">Страница не найдена.</div>
+</div>
 {% templatetag openblock %} endblock content {% templatetag closeblock %}
