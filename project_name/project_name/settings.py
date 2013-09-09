@@ -2,7 +2,7 @@
 
 from unipath import Path
 
-PROJECT_DIR = Path(__file__).ancestor(4)
+PROJECT_DIR = Path(__file__).ancestor(3)
 MAINAPP_DIR = Path(__file__).ancestor(1)
 
 ADMINS = (
