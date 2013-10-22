@@ -61,3 +61,6 @@ DEBUG_TOOLBAR_CONFIG = {
     'SHOW_TEMPLATE_CONTEXT': True,
 }
 
+COMPRESS_YUI_BINARY = '/usr/bin/yuicompressor'
+COMPRESS_CSS_FILTERS = ['compressor.filters.css_default.CssAbsoluteFilter', 'compressor.filters.yui.YUICSSFilter']
+

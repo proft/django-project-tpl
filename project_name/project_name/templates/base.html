@@ -1,4 +1,4 @@
-{% templatetag openblock %} load staticfiles {% templatetag closeblock %}
+{% templatetag openblock %} load staticfiles compress {% templatetag closeblock %}
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -13,10 +13,10 @@
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
+    {% templatetag openblock %} compress css {% templatetag closeblock %} 
     <link href="{% templatetag openblock %} static 'css/base.css' {% templatetag closeblock %}" rel="stylesheet">
-
     {% templatetag openblock %} block extra_css {% templatetag closeblock %}{% templatetag openblock %} endblock extra_css {% templatetag closeblock %}
+    {% templatetag openblock % endcompress {% templatetag closeblock %}  
   </head>
 
 <body>
@@ -27,9 +27,9 @@
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="{% templatetag openblock %} static 'js/bootstrap.min.js' {% templatetag closeblock %}"></script>
 
-    <!-- place project specific Javascript in this file -->
+    {% templatetag openblock %} compress js {% templatetag closeblock %} 
     <script src="{% templatetag openblock %} static 'js/base.js' {% templatetag closeblock %}"></script>
-
     {% templatetag openblock %} block extra_js {% templatetag closeblock %}{% templatetag openblock %} endblock extra_js {% templatetag closeblock %}
+    {% templatetag openblock % endcompress {% templatetag closeblock %} 
 </body>
 </html>
