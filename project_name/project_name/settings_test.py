@@ -1,4 +1,7 @@
 # -*- coding: utf-8 -*-
+
+# RUN: python manage.py test --settings={{ project_name }}.settings_test a
+
 from settings import *
 
 DATABASES = {
