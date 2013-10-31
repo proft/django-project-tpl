@@ -10,7 +10,7 @@ Installing Django
 
 Creating project
 
-    $ django-admin.py startproject --template=https://github.com/proft/django-project-tpl/archive/master.tar.gz --extension=py,html --name=.venv project_name
+    $ django-admin.py startproject --template=https://github.com/proft/django-project-tpl/archive/master.tar.gz --extension=py,html,tpl --name=.venv project_name
 
 Installation of dependencies for development:
 
