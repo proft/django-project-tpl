@@ -56,6 +56,20 @@ def git_stage_with_static(message):
 # Deploy
 #########
 
+@task(alias='ladd')
+def lang_add(lang):
+    local("django-admin.py makemessages -l %s" % lang)
+
+
+@task(alias='lup')
+def lang_up():
+    local("django-admin.py makemessages -a")
+
+
+@task(alias='lcmp')
+def lang_cmpl():
+    local("django-admin.py compilemessages")
+
 
 @task(alias='ird')
 def import_remote_db():
