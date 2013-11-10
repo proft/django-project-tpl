@@ -3,3 +3,4 @@ ipdb
 django-extensions
 django-debug-toolbar
 fabric
+Werkzeug
