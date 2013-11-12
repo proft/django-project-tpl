@@ -52,6 +52,39 @@ def git_stage_with_static(message):
     local('git commit -a -m "%s"' % message)
     local('git push')
 
+
+@task(alias='ctt')
+def create_tpltags(app):
+    tpl = """
+# -*- coding: utf-8 -*-
+
+from django import template
+
+register = template.Library()
+
+
+#@register.filter
+#def filter(value):
+#    return value
+
+#@register.simple_tag
+#def tag(value):
+#    return value
+
+#@register.inclusion_tag('.html')
+#def tag_with_tpl(value):
+#    return value
+    """
+
+    path_to_dir = os.path.join(app, 'templatetags')
+    path_to_file = os.path.join(path_to_dir, "%s_tags.py" % app)
+
+    if not os.path.isdir(path_to_dir):
+        local('mkdir -p %s' % path_to_dir)
+        local('touch %s' % os.path.join(path_to_dir, '__init__.py'))
+        with open(path_to_file, 'w') as file_tpltag:
+            file_tpltag.write(tpl)    
+
 #########
 # Deploy
 #########
