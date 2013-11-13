@@ -82,7 +82,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
 
     'south',
-    "compressor",
+    'compressor',
 )
 
 LOGGING = {

@@ -63,16 +63,16 @@ from django import template
 register = template.Library()
 
 
-#@register.filter
-#def filter(value):
+# @register.filter
+# def filter(value):
 #    return value
 
-#@register.simple_tag
-#def tag(value):
+# @register.simple_tag
+# def tag(value):
 #    return value
 
-#@register.inclusion_tag('.html')
-#def tag_with_tpl(value):
+# @register.inclusion_tag('.html')
+# def tag_with_tpl(value):
 #    return value
     """
 
@@ -84,6 +84,19 @@ register = template.Library()
         local('touch %s' % os.path.join(path_to_dir, '__init__.py'))
         with open(path_to_file, 'w') as file_tpltag:
             file_tpltag.write(tpl)    
+
+
+@task(alias='dm')
+def download_media(dirname):
+    remote_media_path = os.path.join(os.path.dirname(env.code_dir), 'media')
+    remote_dir = os.path.join(remote_media_path, dirname)
+
+    sys.path.append(os.path.dirname(__file__))
+    django.settings_module('bridges.settings')
+    from django.conf import settings
+
+    get(remote_dir, settings.MEDIA_ROOT)
+
 
 #########
 # Deploy
